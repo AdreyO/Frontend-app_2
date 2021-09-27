@@ -1,2 +1,1 @@
-# Frontend-app_2
-Сайт Хакасия
+Task 2 OAA
