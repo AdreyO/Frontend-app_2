@@ -1,4 +1,78 @@
 body{
-    color: red;
-    height: 30px;
+    margin: 0px;
+    max-width: 414px;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+
 }
+.welcome_section{
+    max-height: 1441px;
+}
+.box_background_welcome{
+    width: 414px;
+    height: 1441px;
+    overflow: hidden;
+    position: absolute;
+ }
+.background_welcome{
+    position: absolute;
+    z-index: -1;
+    margin: -50px 0px 100px -736px;
+}
+.box_menu{
+    display: flex;
+    justify-content: space-between;
+    width: 356px;
+    padding: 25px 30px 22px 28px;
+    position: fixed;
+    z-index: 3;
+}
+.scroll_menu{
+    background: rgba(17, 17, 17, 1);
+}
+.btn_scroll{
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: 840px;
+    z-index: 4;
+}
+.down{
+    background-color: rgba(17, 17, 17, 0.8);
+    position: sticky;
+    top:800px;
+    margin-right: 350px;
+    border-radius: 10%;
+}
+.title_welcome{
+    font-family: Amatic SC;
+    z-index: 0;
+    font-size: 96px;
+    font-style: normal;
+    line-height: 121px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 387px 0px 0px 97px;
+}
+.subtitle_welcome{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0px 0px 316px 59px;
+}
+
+
+.box{
+    height: 4500px;
+}
+
+
+
+
+
