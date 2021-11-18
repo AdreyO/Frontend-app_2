@@ -19,8 +19,12 @@ body.lock{
     justify-content: space-between;
 }
 .header__logo{
+    display: inline-block;
     margin: 20px 0px 15px 30px;
     z-index: 5;
+    background-image: url("../img/logo.svg");
+    width: 48px;
+    height: 43px;
 }
 .header__burger{
     display: block;
@@ -62,9 +66,10 @@ body.lock{
 .header__burger.active:after{
     transform: rotate(-45deg);
     bottom: 7px;
-}.header__burger.active span{
+}
+.header__burger.active span{
      transform: scale(0);
- }
+}
 .header__menu{
     position: fixed;
     top: -1000%;
@@ -100,32 +105,28 @@ body.lock{
     background: rgba(17, 17, 17, 1);
 }
 .welcome{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-position: center center;
  }
-.welcome-ImgBox{
-    overflow: hidden;
+.welcome-container{
     position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.welcome-img{
-    position: absolute;
-    z-index: -1;
-    width: 1440px;
-    height: 960px;
-    left: -530px;
-    top: -50px;
+    top: 53%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 .welcome-title{
      font-family: Amatic SC;
      font-size: 96px;
      font-style: normal;
+     font-weight: normal;
      line-height: 121px;
      text-align: center;
      color: rgba(255, 255, 255, 0.8);
-     margin: 387px 0px 0px 0px;
+     margin: 0px;
+     text-transform: uppercase;
  }
 .welcome-subtitle{
     font-family: Roboto;
@@ -142,15 +143,21 @@ body.lock{
     width: 100%;
     margin-bottom: 35px;
     position: absolute;
-    bottom: 0px;
+    bottom: -10px;
+    animation: move 2s linear infinite;
 }
-.отступ{
-     margin-top: 990px;
- }
+@keyframes move {
+    0% {
+        bottom: -10px;
+    }
+    50%{
+        bottom: 20px;
+    }
+    100%{
+        bottom: -10px;
+    }
+}
 .block{
-    position: absolute;
-    width: 100%;
-    margin-top: 990px;
     text-align: center;
 }
 .block__title{
@@ -159,18 +166,17 @@ body.lock{
     font-weight: normal;
     font-size: 36px;
     line-height: 45px;
+    padding: 100px 0px 0px 0px;
     margin: 0;
-    width: 100%;
 }
 .block__item {
     padding: 55px 15px 0px 15px;
     text-align: left;
 }
-.block__boxImg{
+.block__boximg{
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-    width: 100%;
     max-width: 380px;
     height: 297px;
     overflow: hidden;
@@ -192,9 +198,73 @@ body.lock{
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
+    -webkit-line-clamp: 10;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.block__boxtext{
+    margin: 0px 20px 0px 20px;
+}
+.block__container{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+@media screen and (min-width: 900px){
+    body.lock{
+        overflow: visible;
+    }
+    .header__menu{
+        position: absolute;
+        top: 0px;
+        padding: 0;
+        background: rgba(0, 0, 0, 0);
+    }
+    .header__burger{
+        display: none;
+    }
+    .header__list {
+        display: flex;
+        float: right;
+        margin: 40px 130px 0px 0px;
+        padding: 23px;
+    }
+    .header__list li{
+        margin: 0px 20px 20px 0px;
+    }
+    .header__logo{
+        background-image: url("../img/logo_pc.svg");
+        margin: 30px 0px 20px 130px;
+        width: 80px;
+        height: 72px;
+    }
+    .block__item{
+        display: flex;
+        padding: 55px 130px 0px 130px;
+    }
+    .block__boximg{
+        min-width: 380px;
+    }
+    .block{
+        background-color: rgba(238, 238, 238, 1);
+    }
+    .block__item-order0{
+        order: 0;
+    }
+    .block__item-order1{
+        order: 1;
+    }
+    .block__name-item{
+        margin-top: 0px;
+        margin-bottom: 24px;
+    }
+    .block__text-item{
+        -webkit-line-clamp: 15;
+    }
 
+}
 
 
 
