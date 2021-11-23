@@ -1,30 +1,33 @@
-$(document).ready(function () {
-    $('.header__burger').click(function (event) {
-        $('.header__burger,.header__menu').toggleClass('active')
-        $('body').toggleClass('lock');
-        if($('#header').hasClass('header_scroll')){
-            $('.header').removeClass('header_scroll');
+document.addEventListener('DOMContentLoaded', function(){
+
+    let burger = document.querySelector('.header__burger');
+    let menu = document.querySelector('.header__menu');
+    let body = document.querySelector('body');
+    let header = document.querySelector('.header');
+
+    burger.addEventListener('click',() => {
+        burger.classList.toggle('active')
+        menu.classList.toggle('active')
+        body.classList.toggle('lock')
+        if(header.classList.contains('header_scroll')){
+            header.classList.remove('header_scroll');
         }
         else{
-            $('.header').addClass('header_scroll');
+            header.classList.add('header_scroll');
         }
     })
 })
 
-$(window).scroll(function(){
-    if ($(window).scrollTop() > 10) {
-        $('.header').addClass('header_scroll');
-    }
-    else {
-        $('.header').removeClass('header_scroll')
-    }
+window.addEventListener('scroll', function() {
+
+    let header = document.querySelector('.header');
+    if (window.pageYOffset > 10) {header.classList.add('header_scroll');}
+    else {header.classList.remove('header_scroll');}
 });
 
-$(document).ready(function ($) {
-    $('#scroll').click(function (e) {e.preventDefault();
-        $('html, body').animate({scrollTop: $("#down").position().top}, 2000);
-    });
+let scroll = document.querySelector('#scroll');
+
+scroll.addEventListener('click',() => {
+    let attractions = document.querySelector('#attractions');
+    attractions.scrollIntoView({behavior: "smooth"});
 });
-
-
-
