@@ -39,8 +39,6 @@ body.lock{
 .header__burger.active{
     transform: translateY(90vh);
 }
-
-
 .header__burger:before,
 .header__burger:after{
     content: '';
@@ -222,9 +220,6 @@ li:active:hover{
     margin-right: auto;
     padding: 0px 0px 100px 0px;
 }
-
-
-
 @media screen and (min-width: 900px){
     body.lock{
         overflow: visible;
@@ -270,11 +265,6 @@ li:active:hover{
     .block__item:nth-child(even) div.block__boximg{
         order: 1;
     }
-
-
-
-
-
     .block__name-item{
         margin-top: 0px;
         margin-bottom: 24px;

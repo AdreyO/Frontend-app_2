@@ -42,7 +42,7 @@ function ActiveLink() {
     var tours = document.querySelector('#tours').getBoundingClientRect();
     var contacts = document.querySelector('#contacts').getBoundingClientRect();
     var link = document.links
-    let windowY = window.pageYOffset+500
+    var windowY = window.pageYOffset+500
     console.log(windowY,welcome.bottom,attractions.top);
     if (windowY >= welcome.top-body.top && windowY < attractions.top-body.top){
         link[1].style.cssText='text-decoration:underline;';
