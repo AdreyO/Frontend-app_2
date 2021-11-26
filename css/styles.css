@@ -28,12 +28,19 @@ body.lock{
 }
 .header__burger{
     display: block;
-    position: relative;
+    position: fixed;
+    right: 0px;
     width: 24px;
     height: 17px;
     margin: 30px 38px 15px 18px;
     z-index: 5;
+    transition: all 0.5s ease 0s;
 }
+.header__burger.active{
+    transform: translateY(90vh);
+}
+
+
 .header__burger:before,
 .header__burger:after{
     content: '';
@@ -92,6 +99,9 @@ body.lock{
     list-style: none;
     margin: 0px 0px 20px 0px;
     color: #FFFFFF;
+}
+li:active:hover{
+    text-decoration:underline
 }
 .header__link{
     color: #FFFFFF;
@@ -213,6 +223,8 @@ body.lock{
     padding: 0px 0px 100px 0px;
 }
 
+
+
 @media screen and (min-width: 900px){
     body.lock{
         overflow: visible;
@@ -251,12 +263,18 @@ body.lock{
     .block{
         background-color: rgba(238, 238, 238, 1);
     }
-    .block__item-order0{
+
+    .block__item:nth-child(even) div.block__boxtext{
         order: 0;
     }
-    .block__item-order1{
+    .block__item:nth-child(even) div.block__boximg{
         order: 1;
     }
+
+
+
+
+
     .block__name-item{
         margin-top: 0px;
         margin-bottom: 24px;
