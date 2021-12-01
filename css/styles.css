@@ -378,7 +378,7 @@ li:active:hover{
                 flex-basis: 30%;
             }
             .btn--toggle-items {
-             display: block;
+             
                 padding: 10px 15px;
                 border-radius: 8px;
                 margin-top: 10px;
