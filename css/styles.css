@@ -390,9 +390,7 @@ li:active:hover{
                 line-height: 16px;
             }
 
-            .tour--hidden {
-                display: none;
-            }
+           
             .tours_list--all-hidden-visible .tour--hidden {
                 display: flex;
             }
@@ -525,6 +523,9 @@ li:active:hover{
                 .btn--toggle-items {
                     display: block;
                  }
+                 .tour--hidden {
+                display: none;
+            }
             }
             @media (max-width: 980px) {
                 .tour {
