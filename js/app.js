@@ -15,7 +15,7 @@ function init()  {
 const handleToggleItemsButtonClick = (listItemsContainer, pointerEvent) => {
     const classForVisibleHiddenItems = 'tours_list--all-hidden-visible'
 
-    if (pointerEvent.currentTarget.innerText === 'Показать больше') {
+    if (pointerEvent.currentTarget.innerText === 'Больше туров') {
         pointerEvent.currentTarget.innerText = 'Скрыть туры'
         listItemsContainer.classList.add(classForVisibleHiddenItems)
     } else {
