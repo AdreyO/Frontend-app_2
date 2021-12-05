@@ -334,6 +334,7 @@ li:active:hover{
                 font-weight: normal;
                 font-size: 14px;
                 line-height: 16px;
+                background: #FFFFFF;
                  }
             .tour div {
                 background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(255, 255, 255, 0.67) 23.96%, #EEEEEE 78.65%);
